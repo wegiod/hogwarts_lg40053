@@ -9,8 +9,7 @@
 # @File      :test_calc.py
 import pytest
 
-from core.Calc import Calc
-
+from core import Calc
 
 class TestClac:
     #初始化变量，每次执行类时，只执行一次

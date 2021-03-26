@@ -31,13 +31,11 @@ def fight(enemy_hp,enemy_power):
             print("我赢了")
             break
 
-
+#main函数是如果这个条件成立，执行下面的代码，如果导包的话，是不会导入进去的
 if __name__ == "__main__":
     #利用列表推导式生成hp
     hp = [x for x in range(990,1000)]
-    # print(hp)
-    # print(type(hp))
-    #让敌人的hp从hp列表中随机挑选一个值
+    #让敌人的hp从hp列表中随机挑选一个值,choice可以从一个列表中随机选取一个数
     enemy_hp = random.choice(hp)
     print(enemy_hp)
 
