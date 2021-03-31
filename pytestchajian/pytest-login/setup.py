@@ -43,7 +43,7 @@ setup(
     #入口模块，或者入口函数
     entry_points={
         'pytest11':[
-            'pytest-login = pytest_login'
+            'pytest-login = pytest-login'
         ]
     },
     zip_safe=False
