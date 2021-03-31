@@ -3,22 +3,22 @@
 # @Author    :jxd
 # @File      :__init__.py.py
 import logging
-
+from typing import List
 
 logging.basicConfig(level=logging.INFO,
-                    format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(msecs)d %(process)d' ,
+                    format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(msecs)d %(process)d',
                     datefmt='%a ,%d %b %Y %H:%M:%S',
                     filemode='login.log',
-                    filename="w"
+                    filename="w",
                     )
 
+logger = logging.getLogger(__name__)
 
-
-
-logger = logging.basicConfig(__name__)
-
-
-#
-# def login_INFO():
-
+def pytest_collection_modifyitems(session, config, items:List):
+    for item in items:
+        #测试用例的名字
+        item.name = item.name.encode('utf-8').decode('unicode-escape')
+        #测试用例的路径
+        item._nodeid = item.nodeid.encode('utf-8').decode('unicode-escape')
+    items.reverse()
 
