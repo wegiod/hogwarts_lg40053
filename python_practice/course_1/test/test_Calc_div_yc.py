@@ -9,7 +9,7 @@
 # @File      :test_calc.py
 import pytest
 
-from core.Calc import Calc
+from python_practice.course_1.core.Calc import Calc
 
 
 class TestClac:

@@ -3,7 +3,7 @@
 # @Author    :jxd
 # @File      :Calc.py
 
-class Calc:
+class Calc():
 
     def div(self,a,b):
         return a/b
